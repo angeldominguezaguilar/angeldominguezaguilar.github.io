@@ -1,0 +1,110 @@
+<!--
+ Facultad de Arquitectura
+ Colegio de Diseño Gráfico
+ Diseño de Interfaces gráficas de usuario
+ Creador: Angel David Dominguez Aguilar
+-->
+<html>
+<head>
+    <title>Formularios en HTML</title>
+     <link rel="stylesheet" href="../css/style_page.css" type="text/css">
+</head>
+
+<body>
+<header>
+    <h1>FORMULARIOS EN HTML</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="../index.html">Inicio</a></li>
+ <li><a href="enlaces.html">Enlaces</a></li>
+ <li><a href="imagenes.html">Imagenes</a></li>
+ <li><a href="tablas.html">Tablas</a></li>
+ <li><a href="audio.html">Audio</a></li>
+ <li><a href="videos.html">Videos</a></li>
+ <li><a href="formularios.html">Formularios</a></li>
+    </ul>
+</nav>
+
+<main>
+    <section>
+        <h2>FORMULARIO DE INGRESO</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam commodo condimentum tellus laoreet pretium. Integer condimentum, ante id dapibus luctus, arcu quam hendrerit arcu, nec aliquet lorem odio euismod nisl.</p>
+        <br>
+        <form id="form1" name="form1" method="get">
+            <label for="usuario">USUARIO:</label>
+            <input name="usuario" type="text" id="usuario" maxlength="30">
+            <label for="password">CONTRASEÑA:</label>
+            <input name="password" type="password" id="password" maxlength="6">
+            <input type="submit" name="submit" id="submit" value="Enviar">
+        </form>
+    </section>
+
+    <section>
+        <h2>FORMULARIO</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam commodo condimentum tellus laoreet pretium. Integer condimentum, ante id dapibus luctus, arcu quam hendrerit arcu, nec aliquet lorem odio euismod nisl.</p>
+        <br>
+        <form id="form2" name="form2" method="get">
+            <label for="nombre">NOMBRE:</label>
+            <input type="text" name="nombre" id="nombre">
+            <label for="apellidos">APELLIDOS:</label>
+            <input type="text" name="apellidos" id="apellidos">
+            <label for="edad">EDAD:</label>
+            <input name="edad" type="number" id="edad" max="100" min="18">
+            <label for="pais">PAIS:</label>
+            <select name="pais" id="pais">
+                <option value="argentina">ARGENTINA</option>
+                <option value="bolivia">BOLIVIA</option>
+                <option value="colombia">COLOMBIA</option>
+                <option value="mexico">MEXICO</option>
+                <option value="italia">ITALIA</option>
+                <option value="francia">FRANCIA</option>
+                <option value="noruega">NORUEGA</option>
+            </select>
+            <label>GENERO:&nbsp;</label>
+            <br>
+            <br>
+            <label>
+                <input type="radio" name="GENERO" value="masculino" id="GENERO_0"> MASCULINO
+            </label>
+            <br>
+            <label>
+                <input type="radio" name="GENERO" value="femenino" id="GENERO_1"> FEMENINO
+            </label>
+            <br>
+            <br>
+            <label>GENERO MUSICAL QUE PREFIERES:&nbsp;</label>
+            <br>
+            <br>
+            <label>
+                <input type="checkbox" name="musica_pop" value="pop" id="musica_0"> POP
+            </label>
+            <br>
+            <label>
+                <input type="checkbox" name="musica_rock" value="rock" id="musica_1"> ROCK
+            </label>
+            <br>
+            <label>
+                <input type="checkbox" name="musica_jazz" value="jazz" id="musica_2"> JAZZ
+            </label>
+            <br>
+            <label>
+                <input type="checkbox" name="musica_alternativa" value="alternativa" id="musica_3"> ALTERNATIVA
+            </label>
+            <br>
+            <label>
+                <input type="checkbox" name="musica_clasica" value="clasica" id="musica_4"> CLÁSICA
+            </label>
+            <br>
+            <br>
+            <input type="submit" name="submit2" id="submit2" value="Enviar">
+        </form>
+    </section>
+</main>
+
+<footer>
+    <h5>Elaborado por Angel Dominguez Aguilar</h5>
+</footer>
+</body>
+</html>
