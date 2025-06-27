@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Cotiza tu Proyecto</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+ <link rel="stylesheet" type="text/css" href="../css/estilodetexto 1.css">
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #a4fef0, #ffffff);
+    }
+
+    .full-height {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header, footer {
+      background-color: #EF4797;
+      color: white;
+      padding: 1rem 0;
+      text-align: center;
+    }
+
+    .main-content {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .custom-textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      resize: vertical;
+    }
+
+    .hidden { display: none; }
+
+    .close-btn {
+      float: right;
+      font-size: 24px;
+      font-weight: bold;
+      color: #aaa;
+      cursor: pointer;
+    }
+
+    .close-btn:hover { color: #000; }
+
+    .pago-flex {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+    }
+
+    .fila-doble {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .fila-doble > div {
+      flex: 1;
+    }
+
+    .seccion {
+      background: #ffffff;
+      padding: 1.5rem;
+      border-radius: .5rem;
+      box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+    }
+
+    .seccion-wrapper {
+      background-color: #a4fef0;
+      padding: 2rem;
+      border-radius: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="full-height">
+    <header>
+     <h1 class="display-3">ArtOnComi</h1>
+    </header>
+
+    <div class="main-content">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 col-md-10">
+
+            <!-- Formulario Cotización -->
+            <div id="modalCotizacion" class="seccion-wrapper mb-4">
+              <span class="close-btn" onclick="cerrarModal('modalCotizacion')">&times;</span>
+              <div class="seccion">
+                <h7><b>¡Hola!</b></h7>
+                <h7><b>Gracias por ponerte en contacto!</b></h7>
+                <p>A continuación llena los datos requeridos para poder tener una cotización de tu proyecto.</p>
+
+                <form onsubmit="mostrarFormularioCliente(event)">
+                  <div class="form-group mt-3">
+                    <label for="artista"><h6>Nombre del artista</h6></label>
+                    <textarea id="artista" rows="1" class="custom-textarea" required></textarea>
+                  </div>
+
+                  <div class="form-group mt-3">
+                    <label for="detalles"><h6>Da todos los detalles que puedas para una mejor cotización</h6></label>
+                    <textarea id="detalles" rows="6" class="custom-textarea" required></textarea>
+                  </div>
+
+                  <button type="submit" class="btn btn-block text-white" style="background-color: #EF4797;">Siguiente</button>
+                </form>
+              </div>
+            </div>
+
+            <!-- Datos Cliente -->
+            <div id="modalDatosCliente" class="seccion-wrapper mb-4 hidden">
+              <span class="close-btn" onclick="cerrarModal('modalDatosCliente')">&times;</span>
+              <div class="seccion">
+                <h7><b>Datos del Cliente</b></h7>
+                <form onsubmit="mostrarModalPago(event)">
+                  <div class="form-group mt-3">
+                    <label>Nombre:</label>
+                    <input type="text" class="form-control" required>
+                  </div>
+                  <div class="form-group">
+                    <label>Correo:</label>
+                    <input type="email" class="form-control" required>
+                  </div>
+                  <div class="form-group">
+                    <label>Teléfono:</label>
+                    <input type="tel" class="form-control" required>
+                  </div>
+                  <div class="form-group">
+                    <label>Instagram:</label>
+                    <input type="text" class="form-control" required>
+                  </div>
+                  <div class="form-group">
+                    <label>Facebook:</label>
+                    <input type="text" class="form-control" required>
+                  </div>
+                  <div class="form-group">
+                    <label>Comentarios Adicionales:</label>
+                    <textarea rows="4" class="custom-textarea" required></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-block text-white" style="background-color: #EF4797;">Siguiente</button>
+                </form>
+              </div>
+            </div>
+
+            <!-- Pago -->
+            <div id="modalPago" class="seccion-wrapper mb-4 hidden">
+              <span class="close-btn" onclick="cerrarModal('modalPago')">&times;</span>
+              <div class="seccion">
+                <h7><b>¡El/La artista aceptó el proyecto! ✓</b></h7>
+                <div class="pago-flex">
+                  <span><b>PAGO</b></span>
+                  <span><b>Tarjeta de crédito o débito</b></span>
+                </div>
+                <p><b>Cantidad a pagar:</b></p>
+                <p id="amountDisplay" class="h4">$0.00 MXN</p>
+
+                <form onsubmit="mostrarModalRastreo(event)">
+                  <div class="form-group">
+                    <label>Número de tarjeta:</label>
+                    <input type="text" class="form-control" required>
+                  </div>
+                  <div class="form-group">
+                    <label>Nombre en la tarjeta:</label>
+                    <input type="text" class="form-control" required>
+                  </div>
+                  <div class="fila-doble">
+                    <div class="form-group">
+                      <label>Vencimiento (MM/AA):</label>
+                      <input type="text" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                      <label>CVV:</label>
+                      <input type="text" class="form-control" required>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-block text-white" style="background-color: #EF4797;">PAGAR</button>
+                </form>
+              </div>
+            </div>
+
+            <!-- Rastreo -->
+            <div id="modalRastreo" class="seccion-wrapper hidden">
+              <span class="close-btn" onclick="cerrarModal('modalRastreo')">&times;</span>
+              <div class="seccion text-center">
+                <h7>Datos de envío / Tiempo de entrega estimado</h7>
+                <div class="font-weight-bold mb-2">Rastreo de paquete</div>
+                <div>Id de rastreo:<br><b id="trackingId">000000000000</b></div>
+                <div class="mt-2">Llega el: <b id="deliveryDate">1 de Enero</b></div>
+                <button class="btn btn-block mt-4 text-white" style="background-color: #EF4797;" onclick="mostrarModalConfirmacionEntrega()">SIGUIENTE</button>
+              </div>
+            </div>
+
+            <!-- Confirmación de entrega -->
+            <div id="modalConfirmacionEntrega" class="seccion-wrapper hidden">
+              <span class="close-btn" onclick="cerrarModal('modalConfirmacionEntrega')">&times;</span>
+              <div class="seccion">
+                <h7 class="mb-4"><b>Confirmación de entrega</b></73>
+                <p>El/La artista nos informó que tu proyecto fue entregado.</p>
+
+                <div class="form-group mt-3">
+                  <label class="font-weight-bold d-block mb-2">¿Lo recibiste?</label>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="recibido" id="recibido-si" value="si" required>
+                    <label class="form-check-label" for="recibido-si">Sí</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="recibido" id="recibido-no" value="no" required>
+                    <label class="form-check-label" for="recibido-no">No</label>
+                  </div>
+                </div>
+
+                <button class="btn btn-outline-danger btn-block mb-3" onclick="alert('Redirigir a reclamo')">
+                  Abrir Reclamo
+                </button>
+
+                <div class="form-group">
+                  <label for="reseña">Deja una reseña del artista (opcional):</label>
+                  <textarea id="reseña" rows="4" class="custom-textarea"></textarea>
+                </div>
+
+                <button class="btn btn-primary btn-block" onclick="window.location.href='../examen 1.html'">
+                  Enviar
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p class="mb-0">© 2025 Cotizaciones Artísticas - Todos los derechos reservados</p>
+    </footer>
+  </div>
+
+  <!-- Bootstrap JS y lógica -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    function cerrarModal(id) {
+      document.getElementById(id).classList.add('hidden');
+    }
+
+    function mostrarFormularioCliente(e) {
+      e.preventDefault();
+      document.getElementById('modalCotizacion').classList.add('hidden');
+      document.getElementById('modalDatosCliente').classList.remove('hidden');
+    }
+
+    function mostrarModalPago(e) {
+      e.preventDefault();
+      const monto = (Math.random() * 10000).toFixed(2);
+      document.getElementById('amountDisplay').innerText = `$${monto} MXN`;
+      document.getElementById('modalDatosCliente').classList.add('hidden');
+      document.getElementById('modalPago').classList.remove('hidden');
+    }
+
+    function mostrarModalRastreo(e) {
+      e.preventDefault();
+      document.getElementById('modalPago').classList.add('hidden');
+      document.getElementById('modalRastreo').classList.remove('hidden');
+    }
+
+    function mostrarModalConfirmacionEntrega() {
+      document.getElementById('modalRastreo').classList.add('hidden');
+      document.getElementById('modalConfirmacionEntrega').classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>

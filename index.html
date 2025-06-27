@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ArtOncomi</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/estilodetexto 1.css">
+
+  <style>
+    .thumb-img {
+      width: 100%;
+      height: 0;
+      padding-bottom: 100%;
+      object-fit: cover;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .thumb-img img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .rounded-circle {
+      object-fit: cover;
+    }
+
+    .titulo-pagina {
+      margin-bottom: 0;
+    }
+  </style>
+</head>
+<body>
+
+<div class="jumbotron text-center" style="background-color: #EF4797;">
+  <h1 class="display-3">ArtOnComi</h1>
+  <br>
+  <h2 class="text-center">¡Dale vida tu proyecto con ilustraciones personalizadas!</h2>
+</div>
+
+<!-- Carrusel de imágenes -->
+<div id="demo" class="carousel slide mb-5" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+    <li data-target="#demo" data-slide-to="3"></li>
+    <li data-target="#demo" data-slide-to="4"></li>
+    <li data-target="#demo" data-slide-to="5"></li>
+  </ol>
+  <div class="carousel-inner text-center">
+    <div class="carousel-item active">
+      <img src="imagenes/allmight.png" class="d-block w-100" alt="Ilustracion All Might">
+    </div>
+    <div class="carousel-item">
+      <img src="imagenes/girasoll.png" class="d-block w-100" alt="Ilustracion Girasol">
+    </div>
+    <div class="carousel-item">
+      <img src="imagenes/A1.png" class="d-block w-100" alt="Ilustracion Green Day">
+    </div>
+    <div class="carousel-item">
+      <img src="imagenes/A6.png" class="d-block w-100" alt="Ilustración A6">
+    </div>
+    <div class="carousel-item">
+      <img src="imagenes/ferialibro.png" class="d-block w-100" alt="Ilustración Feria del Libro">
+    </div>
+    <div class="carousel-item">
+      <img src="imagenes/luna.png" class="d-block w-100" alt="Ilustración Luna">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#demo" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Anterior</span>
+  </a>
+  <a class="carousel-control-next" href="#demo" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Siguiente</span>
+  </a>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-9">
+      <h3 class="font-weight-bold">¿Qué vas a encontrar?</h3>
+      <br>
+      <p class="text-justify">
+        En ARTonCOMI reunimos portafolios cuidadosamente seleccionados para dar a conocer los trabajos de nuestros artistas, para que puedas tener información de contacto directo, precios orientativos y vías de cotización rápida, para facilitar el vínculo entre artistas y clientes. Apostamos por la transparencia, la calidad visual y el respeto al trabajo creativo. Nuestro objetivo es profesionalizar la presencia de la ilustración en línea, sin perder su autenticidad ni su fuerza expresiva.
+      </p>
+    </div>
+    <div class="col-md-1 align-self-center">
+      <img src="imagenes/artoncomi.png" width="250" alt=""/>
+    </div>
+  </div>
+</div>
+
+<br>
+<div class="container">
+  <h3 class="font-weight-bold">Nuestros Artistas</h3>
+</div>
+
+<div class="container my-5">
+
+  <!-- BLOQUE 1 -->
+  <div class="row align-items-center mb-5">
+    <div class="col-md-3 text-center">
+      <img src="imagenes/fotoangel.jpg" class="rounded-circle" width="200" height="200" alt="Foto Angel Dominguez">
+    </div>
+    <div class="col-md-9 d-flex flex-column justify-content-center">
+      <h4 class="titulo-pagina">Angel Dominguez</h4>
+      <p>
+        ¿Buscas dar vida a tus ideas con un toque único y creativo? ¡Estás en el lugar indicado!<br>
+        Te invito a pedir tu ilustración hecha a tu medida, donde cada trazo cuenta una historia y cada color transmite emoción.<br>
+        Ya sea que necesites una imagen para redes sociales, un personaje personalizado, ilustraciones para productos o un proyecto especial, aquí transformamos tus ideas en arte visual impactante.<br><br>
+        ¡Contáctame y comencemos a ilustrar juntos eso que imaginas!
+      </p>
+      <div class="row">
+        <div class="col-4 col-md-2 mb-3" data-toggle="modal" data-target="#imgModal" data-imgsrc="imagenes/girasol.png">
+          <div class="thumb-img rounded"><img src="imagenes/girasol.png" alt="thumb1"></div>
+        </div>
+        <div class="col-4 col-md-2 mb-3" data-toggle="modal" data-target="#imgModal" data-imgsrc="imagenes/all might.png">
+          <div class="thumb-img rounded"><img src="imagenes/all might.png" alt="thumb2"></div>
+        </div>
+        <div class="col-4 col-md-2 mb-3" data-toggle="modal" data-target="#imgModal" data-imgsrc="imagenes/deku.png">
+          <div class="thumb-img rounded"><img src="imagenes/deku.png" alt="thumb3"></div>
+        </div>
+        <div class="col-4 col-md-2 mb-3" data-toggle="modal" data-target="#imgModal" data-imgsrc="imagenes/mandarina.png">
+          <div class="thumb-img rounded"><img src="imagenes/mandarina.png" alt="thumb4"></div>
+        </div>
+        <div class="col-4 col-md-2 mb-3" data-toggle="modal" data-target="#imgModal" data-imgsrc="imagenes/yo2.png">
+          <div class="thumb-img rounded"><img src="imagenes/yo2.png" alt="thumb5"></div>
+        </div>
+        <div class="col-4 col-md-2 mb-3" data-toggle="modal" data-target="#imgModal" data-imgsrc="imagenes/2d.png">
+          <div class="thumb-img rounded"><img src="imagenes/2d.png" alt="thumb6"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOQUE 2 -->
+  <div class="row align-items-center mb-5">
+    <div class="col-md-3 text-center">
+      <img src="imagenes/fotowaris.jpg" class="rounded-circle" width="200" height="200" alt="Foto Waris Guerrero">
+    </div>
+    <div class="col-md-9 d-flex flex-column justify-content-center">
+      <h4 class="titulo-pagina">Waris Guerrero</h4>
+      <p>
+        ¿Buscas dar vida a tus ideas con un toque único y creativo? ¡Estás en el lugar indicado!<br>
+        Te invito a pedir tu ilustración hecha a tu medida, donde cada trazo cuenta una historia y cada color transmite emoción.<br>
+        Ya sea que necesites una imagen para redes sociales, un personaje personalizado, ilustraciones para productos o un proyecto especial, aquí transformamos tus ideas en arte visual impactante.<br><br>
+        ¡Contáctame y comencemos a ilustrar juntos eso que imaginas!
+      </p>
+      <div class="row">
+        <div class="col-4 col-md-2 mb-3" data-toggle="modal" data-target="#imgModal" data-imgsrc="imagenes/tom.png">
+          <div class="thumb-img rounded"><img src="imagenes/tom.png" alt="thumb1"></div>
+        </div>
+        <div class="col-4 col-md-2 mb-3" data-toggle="modal" data-target="#imgModal" data-imgsrc="imagenes/alien.png">
+          <div class="thumb-img rounded"><img src="imagenes/alien.png" alt="thumb2"></div>
+        </div>
+        <div class="col-4 col-md-2 mb-3" data-toggle="modal" data-target="#imgModal" data-imgsrc="imagenes/lobo.png">
+          <div class="thumb-img rounded"><img src="imagenes/lobo.png" alt="thumb3"></div>
+        </div>
+        <div class="col-4 col-md-2 mb-3" data-toggle="modal" data-target="#imgModal" data-imgsrc="imagenes/maria.png">
+          <div class="thumb-img rounded"><img src="imagenes/maria.png" alt="thumb4"></div>
+        </div>
+        <div class="col-4 col-md-2 mb-3" data-toggle="modal" data-target="#imgModal" data-imgsrc="imagenes/muertos.jpg">
+          <div class="thumb-img rounded"><img src="imagenes/muertos.jpg" alt="thumb5"></div>
+        </div>
+        <div class="col-4 col-md-2 mb-3" data-toggle="modal" data-target="#imgModal" data-imgsrc="imagenes/niña.png">
+          <div class="thumb-img rounded"><img src="imagenes/niña.png" alt="thumb6"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOQUE 3 -->
+  <div class="row align-items-center mb-5">
+    <div class="col-md-3 text-center">
+      <img src="imagenes/fotoalex.jpg" class="rounded-circle" width="200" height="200" alt="Foto Alex Guerrero">
+    </div>
+    <div class="col-md-9 d-flex flex-column justify-content-center">
+      <h4 class="titulo-pagina">Alex Guerrero</h4>
+      <p>
+        ¿Buscas dar vida a tus ideas con un toque único y creativo? ¡Estás en el lugar indicado!<br>
+        Te invito a pedir tu ilustración hecha a tu medida, donde cada trazo cuenta una historia y cada color transmite emoción.<br>
+        Ya sea que necesites una imagen para redes sociales, un personaje personalizado, ilustraciones para productos o un proyecto especial, aquí transformamos tus ideas en arte visual impactante.<br><br>
+        ¡Contáctame y comencemos a ilustrar juntos eso que imaginas!
+      </p>
+      <div class="row">
+        <div class="col-4 col-md-2 mb-3" data-toggle="modal" data-target="#imgModal" data-imgsrc="imagenes/spiderpunk.png">
+          <div class="thumb-img rounded"><img src="imagenes/spiderpunk.png" alt="thumb1"></div>
+        </div>
+        <div class="col-4 col-md-2 mb-3" data-toggle="modal" data-target="#imgModal" data-imgsrc="imagenes/A.png">
+          <div class="thumb-img rounded"><img src="imagenes/A.png" alt="thumb2"></div>
+        </div>
+        <div class="col-4 col-md-2 mb-3" data-toggle="modal" data-target="#imgModal" data-imgsrc="imagenes/A2.png">
+          <div class="thumb-img rounded"><img src="imagenes/A2.png" alt="thumb3"></div>
+        </div>
+        <div class="col-4 col-md-2 mb-3" data-toggle="modal" data-target="#imgModal" data-imgsrc="imagenes/A6.jpg">
+          <div class="thumb-img rounded"><img src="imagenes/A6.jpg" alt="thumb4"></div>
+        </div>
+        <div class="col-4 col-md-2 mb-3" data-toggle="modal" data-target="#imgModal" data-imgsrc="imagenes/A7.png">
+          <div class="thumb-img rounded"><img src="imagenes/A7.png" alt="thumb5"></div>
+        </div>
+        <div class="col-4 col-md-2 mb-3" data-toggle="modal" data-target="#imgModal" data-imgsrc="imagenes/A9.png">
+          <div class="thumb-img rounded"><img src="imagenes/A9.png" alt="thumb6"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="text-center my-5">
+  <a href="html/cotizacion 2.html" class="btn btn-primary btn-lg" style="background-color: #EF4797;">COTIZA TU PROYECTO</a>
+</div>
+
+<!-- Modal para ver imagen en pantalla completa -->
+<div class="modal fade" id="imgModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content bg-transparent border-0">
+      <img id="modalImage" src="" class="img-fluid rounded" alt="Fullscreen image">
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<div class="card-footer text-center" style="background-color: #79328C;">
+  <br>
+  <h5>©2025 ArtOnComi. Todos los derechos reservados.</h5>
+  <br>
+</div>
+
+<!-- Scripts necesarios -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<!-- Script para abrir modal con imagen -->
+<script>
+  $('#imgModal').on('show.bs.modal', function (event) {
+    var thumb = $(event.relatedTarget);
+    var imgSrc = thumb.data('imgsrc');
+    $('#modalImage').attr('src', imgSrc);
+  });
+</script>
+
+</body>
+</html>

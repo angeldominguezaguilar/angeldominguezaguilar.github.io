@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Righteous&display=swap');
+
+
+h1 {
+	font-family: 'Righteous', sans-serif;
+	color: #fbffcd;
+}
+
+h2 {
+	font-family: 'Poppins', sans-serif;
+	color: #a4fef0;
+}
+
+h3 {
+	font-family: 'Poppins', sans-serif;
+	color: #EF4797;
+}
+
+h4 {
+	font-family: 'Righteous', sans-serif;
+	color: #79328C;
+}
+
+h5 {
+	font-family: 'Righteous', sans-serif;
+	color:#fbffcd ;
+}
+
+h6 {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 300;
+	
+}
+
+h7 {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 500;
+	
+}
+
+p{
+	 font-family: 'Poppins', sans-serif;
+}
+
+body{
+	background-color:  #a4fef0;
+}
